@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Admin Panel</title>
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #f4f6f8;
+			text-align: center;
+			padding: 50px;
+			color: #333;
+		}
+		
+		h1 {
+			font-size: 2.5rem;
+			margin-bottom: 30px;
+			color: #2c3e50;
+		}
+
+		h2 {
+			color: #16a085;
+		}
+
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: white;
+			background-color: #3498db;
+			padding: 12px 24px;
+			margin: 10px;
+			border-radius: 8px;
+			font-weight: bold;
+			transition: background-color 0.3s ease;
+		}
+
+		a:hover {
+			background-color: #2980b9;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: auto;
+			background-color: white;
+			padding: 30px;
+			border-radius: 12px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 th:text="${message}"></h2>
+		
+		<h1>Welcome to Admin Panel</h1>
+
+		<a href="readAllContacts">📋 Read All Contacts</a><br>
+		<a href="readAllBookings">📖 Read All Bookings</a><br>
+		<a href="addService">➕ Add Services</a><br>
+		<a href="changeCredentials">🔑 Change Credentials</a><br>
+		<a href="/dologout" style="background-color: #e74c3c;">🚪 Logout</a><br>
+	</div>
+</body>
+</html>
